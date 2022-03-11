@@ -15,10 +15,12 @@ body
 label
 {
     position: relative;
+    top: -150px;
     width: 150px;
     height: 75px;
     background: #212121;
     border-radius: 10px;
+    
 }
 label input
 {
@@ -39,6 +41,7 @@ label span
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 label input:checked ~ span
 {
@@ -59,11 +62,15 @@ label input:checked ~ span ion-icon
 {
     position: absolute;
     top: 80px;
-    left: 50px;
+    left: 50%;
     transform: translateX(-50%);
     width: 348px;
     height: 408px;
     pointer-events: none;
     background-image: url(/bulb_off.jpg);
     transition: 0.5s; 
+}
+label input:checked ~ .bulb
+{
+background-image: url(/bulb_on.jpg);
 }
